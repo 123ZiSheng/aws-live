@@ -346,19 +346,19 @@ def studLogin():
         cursor.execute(fetch_student_sql, (studEmail))
         records = cursor.fetchall()
 
-        studId = records[0][3]
-        file1 = "stud-id-" + str(studId) + "_file1.pdf"
-        file2 = "stud-id-" + str(studId) + "_file2.pdf"
-        file3 = "stud-id-" + str(studId) + "_file3.pdf"
-        file4 = "stud-id-" + str(studId) + "_file4.pdf"
-        # cursor.execute(fetch_company_sql, (status))
-        # companyRecords = cursor.fetchall()
-
         if not records:
             return render_template('StudLogin.html', not_exist=True)
         elif records[0][4] != studIc:
             return render_template('StudLogin.html', login_failed=True)
         else:
+            studId = records[0][3]
+            file1 = "stud-id-" + str(studId) + "_file1.pdf"
+            file2 = "stud-id-" + str(studId) + "_file2.pdf"
+            file3 = "stud-id-" + str(studId) + "_file3.pdf"
+            file4 = "stud-id-" + str(studId) + "_file4.pdf"
+            # cursor.execute(fetch_company_sql, (status))
+            # companyRecords = cursor.fetchall()
+
             try:
                 s3.head_object(Bucket=custombucket, Key=file1)
                 file_exists = True

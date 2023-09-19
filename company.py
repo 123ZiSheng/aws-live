@@ -524,7 +524,7 @@ def studPage():
     finally:
         cursor.close()
 
-    return render_template('StudPageOutput.html', student = records, url1=response1, url2=response2, url3=response3, url4=response4, file_exist=True, success=True)
+    return render_template('StudPage.html', student = records, url1=response1, url2=response2, url3=response3, url4=response4, file_exist=True, success=True)
 
 
 @app.route("/adminLogin", methods=['GET', 'POST'])

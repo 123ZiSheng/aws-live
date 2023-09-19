@@ -10,9 +10,7 @@
 
   <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css')}}">
   <link rel="stylesheet" href="{{ url_for('static', filename='AdminLogin.css')}}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
-<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+
   <meta name="generator" content="Nicepage 5.17.1, nicepage.com">
   <meta name="referrer" content="origin">
   <link id="u-theme-google-font" rel="stylesheet"
@@ -20,21 +18,21 @@
   <link id="u-page-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i">
 
-<style>
-      #nav {
-        list-style-type: none;
-        padding: 0;
-        overflow: hidden;
-      }
-      
-      #link {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-      </style>
+  <style>
+    #nav {
+      list-style-type: none;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #link {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  </style>
 
 
 
@@ -72,12 +70,12 @@
       {% endif %}
 
       <ul id="nav">
-      <li  style="float:left"><a id="link" href="/">Home</a></li>
-      <li  style="float:right"><a id="link" href="/toCompanyLogin">Company</a></li>
-      <li  style="float:right"><a id="link" href="/toSvLogin">Uni Supervisor</a></li>
-      <li  style="float:right"><a id="link" href="/toStudLogin">Student</a></li>
-      <li  style="float:right"><a id="link" href="/toAdminLogin">Admin</a></li>
-    </ul>
+        <li style="float:left"><a id="link" href="/">Home</a></li>
+        <li style="float:right"><a id="link" href="/toCompanyLogin">Company</a></li>
+        <li style="float:right"><a id="link" href="/toSvLogin">Uni Supervisor</a></li>
+        <li style="float:right"><a id="link" href="/toStudLogin">Student</a></li>
+        <li style="float:right"><a id="link" href="/toAdminLogin">Admin</a></li>
+      </ul>
     </div>
   </header>
   <section class="u-clearfix u-section-1" id="sec-3c0c">
@@ -108,7 +106,7 @@
           </div>
           <div class="u-form-email u-form-group u-label-left">
             <label for="email-1037" class="u-label u-label-2">Student IC</label>
-            <input type="text" placeholder="IC" id="email-1037" name="studIc"
+            <input type="text" placeholder="Student IC" id="email-1037" name="studIc"
               class="u-input u-input-rectangle u-input-2" required="">
           </div>
           <div class="u-form-group u-form-submit u-label-left">
@@ -116,12 +114,13 @@
             <input type="submit" value="Login">
             <div class="u-align-left u-btn-submit-container">
             </div>
-          </div> </div>
-		<a href="/toStudRegister"
-      class="u-active-none u-border-2 u-border-active-palette-2-dark-1 u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-btn u-button-style u-hover-none u-none u-text-hover-palette-2-base u-text-palette-1-base u-btn-2">Sign
-      Up</a>
-        </form>
+          </div>
       </div>
+      <a href="/toStudRegister"
+        class="u-active-none u-border-2 u-border-active-palette-2-dark-1 u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-btn u-button-style u-hover-none u-none u-text-hover-palette-2-base u-text-palette-1-base u-btn-2">Sign
+        Up</a>
+      </form>
+    </div>
     </div>
   </section>
   <section class="u-clearfix u-section-3" id="sec-fc59">

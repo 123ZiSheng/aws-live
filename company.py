@@ -453,7 +453,7 @@ def studPage():
 
                 if not file_exists:
                     #render this page if the no files
-                    return render_template('StudPage.html', student=records, file_exist=False)
+                    return render_template('StudPage.html', student=records, file_exist=False, files_empty=True)
                 
                 response1 = s4.generate_presigned_url('get_object',
                                                 Params={'Bucket': custombucket,

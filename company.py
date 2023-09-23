@@ -217,17 +217,28 @@ def companyUpload():
     try:
         expiration = 3600
         try:
+            s3.head_object(Bucket=custombucket, Key=company_filename_in_s3)
+            file_exists = True
+        except ClientError as e:
+            if e.response['Error']['Code'] == '404':
+                file_exists = False
+            else:
+                logging.error(e)
+                return str(e)
+
+        try:
             response = s3.generate_presigned_url('get_object',
                                                 Params={'Bucket': custombucket,
                                                         'Key': company_filename_in_s3},
                                                 ExpiresIn=expiration)
         except ClientError as e:
             logging.error(e)
+            
         cursor.execute(fetch_company_sql, (companyEmail))
         companyRecord = cursor.fetchone()
 
         if company_File.filename == "":
-            if response is None:
+            if not file_exists:
                 return render_template('CompanyPage.html', company=companyRecord, no_file_uploaded=True, file_exist = False)
             else:
                 return render_template('CompanyPage.html', company=companyRecord, file_exist = True, url = response, no_file_uploaded=True)

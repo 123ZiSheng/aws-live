@@ -5,11 +5,11 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>Home</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
-	<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+	<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.17.1, nicepage.com">
@@ -29,6 +29,19 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+      }
+
+	    div.polaroid {
+        width: 30%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+	margin-left: 500px;
+      }
+      
+      div.container {
+        text-align: center;
+        padding: 10px 20px;
       }
       </style>
     
@@ -74,7 +87,50 @@ Information Technology (FOCS) to submit their ITP related documents.&nbsp;</i>
       </div>
       
     </section>
-    
+
+<h5 style="margin-left:500px;">Portfolio of Person In Charge</h5>
+
+<div class="polaroid">
+  <img src="{{ url_for('static', filename='zs.png') }}" alt="5 Terre" style="width:20%; margin-left: 100px;">
+  <div class="container">
+  <p>How Zi Sheng</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="{{ url_for('static', filename='zx.png') }}" alt="Norther Lights" style="width:20%; margin-left: 100px;">
+  <div class="container">
+  <p>How Zi Xian</p>
+  </div>
+</div>
+
+	  <div class="polaroid">
+  <img src="{{ url_for('static', filename='sy.png') }}" alt="Norther Lights" style="width:20%; margin-left: 100px;">
+  <div class="container">
+  <p>Lee Siak Yen</p>
+  </div>
+</div>
+
+	  <div class="polaroid">
+  <img src="{{ url_for('static', filename='wy.png') }}" alt="Norther Lights" style="width:20%; margin-left: 100px;">
+  <div class="container">
+  <p>Phoon Wing Yan</p>
+  </div>
+</div>
+
+	  <div class="polaroid">
+  <img src="{{ url_for('static', filename='sharren.png') }}" alt="Norther Lights" style="width:20%; margin-left: 100px;">
+  <div class="container">
+  <p>Sharren Tang</p>
+  </div>
+</div>
+
+	  <div class="polaroid">
+  <img src="{{ url_for('static', filename='ch.png') }}" alt="Norther Lights" style="width:20%; margin-left: 100px;">
+  <div class="container">
+  <p>Lee Chen Hong</p>
+  </div>
+</div>
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-837d"><div class="u-clearfix u-sheet u-sheet-1">
